@@ -9,7 +9,7 @@ return [
     /**
      * Locale used for formatting by default (when locale is not explicitly set).
      */
-    'default_locale' => 'dv',
+    'default_locale' => 'ar',
 
     /**
      * Maximum and minimum limit for Hijri date years.
@@ -23,7 +23,7 @@ return [
      */
     'conversion' => [
         // Customize from where the conversion mapping data is fetched, and how it is cached ...
-        'data_url' => 'https://gist.githubusercontent.com/Remls/b0ebba53bb2a8670f333f8a88de4aae3/raw',
+        'data_url' => 'https://gist.githubusercontent.com/Mo7mud/181391cfc18bbaf34ad3d961d659a6f4/raw', // Umm al-Qura data for years 1343-1500 AH (1924-2077 AD)
         'cache_key' => 'hijri_to_gregorian_map',
         'cache_period' => 60 * 24,
 
