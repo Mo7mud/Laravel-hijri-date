@@ -20,18 +20,18 @@ Laravel helper package for Hijri dates. Supports displaying dates in Arabic, Ben
 ## Installation
 
 ```
-composer require remls/hijri-date
+composer require mo7mud/hijri-date
 ```
 
 To publish configuration files:
 
 ```sh
-php artisan vendor:publish --provider="Remls\HijriDate\HijriDateServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Mo7mud\HijriDate\HijriDateServiceProvider" --tag="config"
 ```
 
 ## Creating dates
 
-All of the following methods return an instance of `Remls\HijriDate\HijriDate`.
+All of the following methods return an instance of `Mo7mud\HijriDate\HijriDate`.
 
 ```php
 use Carbon\Carbon;
