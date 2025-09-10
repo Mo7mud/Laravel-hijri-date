@@ -28,6 +28,6 @@ return [
         'cache_period' => 60 * 24,
 
         // ... or gain full control over how conversion works by defining your own converter class.
-        'converter' => \Remls\HijriDate\Converters\MaldivesG2HConverter::class,
+        'converter' => \Mo7mud\HijriDate\Converters\MakkaG2HConverter::class,
     ],
 ];

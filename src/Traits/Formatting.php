@@ -1,6 +1,6 @@
 <?php
 
-namespace Remls\HijriDate\Traits;
+namespace Mo7mud\HijriDate\Traits;
 
 trait Formatting
 {

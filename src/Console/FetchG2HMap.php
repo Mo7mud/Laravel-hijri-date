@@ -1,6 +1,6 @@
 <?php
 
-namespace Remls\HijriDate\Console;
+namespace Mo7mud\HijriDate\Console;
 
 use Illuminate\Console\Command;
 
@@ -17,7 +17,7 @@ class FetchG2HMap extends Command
         cache()->forget($cacheKey);
 
         $this->info("Fetching data from source...");
-        $converter = new \Remls\HijriDate\Converters\MaldivesG2HConverter();
+        $converter = new \Mo7mud\HijriDate\Converters\MakkaG2HConverter();
         $converter->getData();
 
         $this->info("Done!");

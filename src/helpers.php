@@ -1,12 +1,12 @@
 <?php
 
-use Remls\HijriDate\HijriDate;
+use Mo7mud\HijriDate\HijriDate;
 
 if (!function_exists('today_hijri')) {
     /**
      * Get today's Hijri date.
      *
-     * @return \Remls\HijriDate\HijriDate
+     * @return \Mo7mud\HijriDate\HijriDate
      */
     function today_hijri(): HijriDate
     {

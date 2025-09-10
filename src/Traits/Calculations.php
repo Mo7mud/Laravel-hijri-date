@@ -1,8 +1,8 @@
 <?php
 
-namespace Remls\HijriDate\Traits;
+namespace Mo7mud\HijriDate\Traits;
 
-use Remls\HijriDate\HijriDate;
+use Mo7mud\HijriDate\HijriDate;
 use OutOfRangeException;
 
 trait Calculations
@@ -12,7 +12,7 @@ trait Calculations
      * 
      * @param int $daysToAdd
      * @param bool $useGregorian Use converted Gregorian date to return a more accurate result.
-     * @return \Remls\HijriDate\HijriDate
+     * @return \Mo7mud\HijriDate\HijriDate
      */
     public function addDays(int $daysToAdd = 1, bool $useGregorian = true): HijriDate
     {
@@ -58,7 +58,7 @@ trait Calculations
      *
      * @param int $daysToSubtract
      * @param bool $useGregorian Use converted Gregorian date to return a more accurate result.
-     * @return \Remls\HijriDate\HijriDate
+     * @return \Mo7mud\HijriDate\HijriDate
      */
     public function subDays(int $daysToSubtract = 1, bool $useGregorian = true): HijriDate
     {
@@ -102,7 +102,7 @@ trait Calculations
     /**
      * Get the difference in days between this and another HijriDate.
      * 
-     * @param \Remls\HijriDate\HijriDate $other
+     * @param \Mo7mud\HijriDate\HijriDate $other
      * @param bool $absolute Get absolute value of the difference
      * @param bool $useGregorian Use converted Gregorian date to return a more accurate result.
      * @return int

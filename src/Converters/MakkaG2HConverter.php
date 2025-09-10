@@ -1,14 +1,14 @@
 <?php
 
-namespace Remls\HijriDate\Converters;
+namespace Mo7mud\HijriDate\Converters;
 
-use Remls\HijriDate\Converters\Contracts\GregorianToHijriConverter;
-use Remls\HijriDate\HijriDate;
+use Mo7mud\HijriDate\Converters\Contracts\GregorianToHijriConverter;
+use Mo7mud\HijriDate\HijriDate;
 use Carbon\Carbon;
 use InvalidArgumentException;
 use RuntimeException;
 
-class MaldivesG2HConverter implements GregorianToHijriConverter
+class MakkaG2HConverter implements GregorianToHijriConverter
 {
     private string $dataUrl;
     private string $cacheKey;
@@ -74,7 +74,7 @@ class MaldivesG2HConverter implements GregorianToHijriConverter
      * Get the HijriDate object from a Gregorian date.
      * 
      * @param \Carbon\Carbon $gregorian
-     * @return \Remls\HijriDate\HijriDate
+     * @return \Mo7mud\HijriDate\HijriDate
      */
     public function getHijriFromGregorian(Carbon $gregorian): HijriDate
     {
@@ -103,8 +103,8 @@ class MaldivesG2HConverter implements GregorianToHijriConverter
             $dateDisplay = $gregorian->format('d M Y');
             throw new InvalidArgumentException("Date is too old to be converted ($dateDisplay).");
             // To resolve, do one of the following:
-            // - use MaldivesEstimateG2HConverter after handling this exception
-            // - use MaldivesEstimateG2HConverter in config('hijri.conversion.converter') to handle all dates with that class
+            // - use MakkaEstimateG2HConverter after handling this exception
+            // - use MakkaEstimateG2HConverter in config('hijri.conversion.converter') to handle all dates with that class
             // - provide your own date map in config('hijri.conversion.data_url') with data for older dates
             // - use your own converter class in config('hijri.conversion.converter') that handles older dates
         }
@@ -117,7 +117,7 @@ class MaldivesG2HConverter implements GregorianToHijriConverter
     /**
      * Get the Gregorian date from a HijriDate object.
      * 
-     * @param \Remls\HijriDate\HijriDate $hijri
+     * @param \Mo7mud\HijriDate\HijriDate $hijri
      * @return \Carbon\Carbon
      */
     public function getGregorianFromHijri(HijriDate $hijri): Carbon
@@ -143,8 +143,8 @@ class MaldivesG2HConverter implements GregorianToHijriConverter
             $dateDisplay = $hijri->format('d M Y');
             throw new InvalidArgumentException("Hijri date is too old to be converted ($dateDisplay).");
             // To resolve, do one of the following:
-            // - use MaldivesEstimateG2HConverter after handling this exception
-            // - use MaldivesEstimateG2HConverter in config('hijri.conversion.converter') to handle all dates with that class
+            // - use MakkaEstimateG2HConverter after handling this exception
+            // - use MakkaEstimateG2HConverter in config('hijri.conversion.converter') to handle all dates with that class
             // - provide your own date map in config('hijri.conversion.data_url') with data for older dates
             // - use your own converter class in config('hijri.conversion.converter') that handles older dates
         }

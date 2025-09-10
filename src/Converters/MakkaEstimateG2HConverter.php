@@ -1,20 +1,20 @@
 <?php
 
-namespace Remls\HijriDate\Converters;
+namespace Mo7mud\HijriDate\Converters;
 
-use Remls\HijriDate\Converters\Contracts\GregorianToHijriConverter;
-use Remls\HijriDate\HijriDate;
+use Mo7mud\HijriDate\Converters\Contracts\GregorianToHijriConverter;
+use Mo7mud\HijriDate\HijriDate;
 use Carbon\Carbon;
 use IntlDateFormatter;
 use IntlCalendar;
 
-class MaldivesEstimateG2HConverter implements GregorianToHijriConverter
+class MakkaEstimateG2HConverter implements GregorianToHijriConverter
 {
     /**
      * Get the HijriDate object from a Gregorian date.
      * 
      * @param \Carbon\Carbon $gregorian
-     * @return \Remls\HijriDate\HijriDate
+     * @return \Mo7mud\HijriDate\HijriDate
      */
     public function getHijriFromGregorian(Carbon $gregorian): HijriDate
     {
@@ -34,7 +34,7 @@ class MaldivesEstimateG2HConverter implements GregorianToHijriConverter
     /**
      * Get the Gregorian date from a HijriDate object.
      * 
-     * @param \Remls\HijriDate\HijriDate $hijri
+     * @param \Mo7mud\HijriDate\HijriDate $hijri
      * @return \Carbon\Carbon
      */
     public function getGregorianFromHijri(HijriDate $hijri): Carbon

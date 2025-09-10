@@ -1,6 +1,6 @@
 <?php
 
-namespace Remls\HijriDate;
+namespace Mo7mud\HijriDate;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -9,7 +9,7 @@ class HijriDateServiceProvider extends ServiceProvider
     public function register()
     {
         $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-        $loader->alias('HijriDate', \Remls\HijriDate\HijriDate::class);
+        $loader->alias('HijriDate', \Mo7mud\HijriDate\HijriDate::class);
         
         $this->mergeConfigFrom(__DIR__ . '/../config/hijri.php', 'hijri');
 

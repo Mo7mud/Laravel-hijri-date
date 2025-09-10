@@ -1,5 +1,5 @@
 <!-- omit in toc -->
-# HijriDate
+# Hijri Date Umm al-Qura calendar
 
 Laravel helper package for Hijri dates. Supports displaying dates in Arabic, Bengali, Dhivehi and English out of the box, with support for further customizations or adding a language of your choice.
 
@@ -50,13 +50,13 @@ HijriDate::createFromGregorian($input);        // 12th Dhul-Hijja 1422
 
 ### Customizing how dates are converted between Hijri and Gregorian
 
-By default, the package uses [an external map](https://gist.github.com/Remls/b0ebba53bb2a8670f333f8a88de4aae3) between Hijri and Gregorian dates in Maldives to convert between the two. This map is cached and reused for subsequent conversions.
+By default, the package uses [an external map](https://gist.githubusercontent.com/Mo7mud/181391cfc18bbaf34ad3d961d659a6f4/raw) between Hijri and Gregorian dates in Umm al-Qura to convert between the two. This map is cached and reused for subsequent conversions.
 
 You may customize for how long the map is cached by changing `config/hijri.php` > `conversion.cache_period`.
 
 You may manually re-fetch data from the external source by running `php artisan hijri:fetch`.
 
-The package also comes with an alternative class for converting dates using calculations instead of a map. You may enable it by changing `config/hijri.php` > `conversion.converter` to `\Remls\HijriDate\Converters\MaldivesEstimateG2HConverter::class`.
+The package also comes with an alternative class for converting dates using calculations instead of a map. You may enable it by changing `config/hijri.php` > `conversion.converter` to `\Remls\HijriDate\Converters\MakkaEstimateG2HConverter::class`.
 
 You may customize how dates are converted by:
 
@@ -221,7 +221,7 @@ The package no longer uses estimates when converting from Hijri to Gregorian by 
 - New keys have been added to `config/hijri.php`. You may need to update your configuration file.
 - The function `getEstimateFromGregorian` has been **REMOVED** in favour of `createFromGregorian`.
   - To maintain the same behaviour as before:
-    1. Change `config/hijri.php` > `conversion.converter` to `\Remls\HijriDate\Converters\MaldivesEstimateG2HConverter::class`.
+    1. Change `config/hijri.php` > `conversion.converter` to `\Remls\HijriDate\Converters\MakkaEstimateG2HConverter::class`.
     2. Change all calls from `getEstimateFromGregorian` to `createFromGregorian`.
 - The function `isEstimate` has been **REMOVED**. There is no more need to check if the date was made from an estimate, as you can now always just get the corresponding Gregorian date with a call to `getGregorianDate`, regardless of how it was created.
 - The function `getEstimatedFrom` has been **REMOVED** in favour of `getGregorianDate`.

@@ -1,12 +1,12 @@
 {
-  "name": "remls/hijri-date",
+  "name": "mo7mud/hijri-date",
   "description": "Laravel helper package for Hijri dates.",
   "type": "library",
   "license": "MIT",
   "authors": [
     {
-      "name": "Adam Raaif Nasheed",
-      "email": "adam.raaif.nasheed7@gmail.com"
+      "name": "Mohammad Ahmad Abdul Kadir",
+      "email": "sop7ana.allah@gmail.com"
     }
   ],
   "require": {
@@ -16,7 +16,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Remls\\HijriDate\\": "src"
+      "Mo7mud\\HijriDate\\": "src"
     },
     "files": [
       "src/helpers.php"
@@ -25,7 +25,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Remls\\HijriDate\\HijriDateServiceProvider"
+        "Mo7mud\\HijriDate\\HijriDateServiceProvider"
       ]
     }
   }

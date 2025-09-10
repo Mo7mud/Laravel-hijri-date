@@ -1,9 +1,9 @@
 <?php
 
-namespace Remls\HijriDate\Rules;
+namespace Mo7mud\HijriDate\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
-use Remls\HijriDate\HijriDate as HijriDateClass;
+use Mo7mud\HijriDate\HijriDate as HijriDateClass;
 use InvalidArgumentException;
 
 class ValidHijriDate implements Rule

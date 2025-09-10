@@ -1,8 +1,8 @@
 <?php
 
-namespace Remls\HijriDate\Traits;
+namespace Mo7mud\HijriDate\Traits;
 
-use Remls\HijriDate\HijriDate;
+use Mo7mud\HijriDate\HijriDate;
 
 trait ExactCalculations
 {
@@ -10,7 +10,7 @@ trait ExactCalculations
      * Add specified amount of days. Uses Gregorian dates for calculation.
      * 
      * @param int $daysToAdd
-     * @return \Remls\HijriDate\HijriDate
+     * @return \Mo7mud\HijriDate\HijriDate
      */
     public function addDaysExact(int $daysToAdd = 1): HijriDate
     {
@@ -31,7 +31,7 @@ trait ExactCalculations
      * Subtract specified amount of days. Uses Gregorian dates for calculation.
      *
      * @param int $daysToSubtract
-     * @return \Remls\HijriDate\HijriDate
+     * @return \Mo7mud\HijriDate\HijriDate
      */
     public function subDaysExact(int $daysToSubtract = 1): HijriDate
     {
@@ -51,7 +51,7 @@ trait ExactCalculations
     /**
      * Get the difference in days between this and another HijriDate. Uses Gregorian dates for calculation.
      * 
-     * @param \Remls\HijriDate\HijriDate $other
+     * @param \Mo7mud\HijriDate\HijriDate $other
      * @param bool $absolute Get absolute value of the difference
      * @return int
      */

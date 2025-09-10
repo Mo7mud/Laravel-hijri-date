@@ -1,16 +1,16 @@
 <?php
 
-namespace Remls\HijriDate;
+namespace Mo7mud\HijriDate;
 
 use Carbon\Carbon;
 use Illuminate\Contracts\Database\Eloquent\CastsAttributes;
 use Illuminate\Contracts\Database\Eloquent\SerializesCastableAttributes;
 use InvalidArgumentException;
-use Remls\HijriDate\Traits\Calculations;
-use Remls\HijriDate\Traits\ExactCalculations;
-use Remls\HijriDate\Traits\Comparisons;
-use Remls\HijriDate\Traits\Formatting;
-use Remls\HijriDate\Converters\Contracts\GregorianToHijriConverter;
+use Mo7mud\HijriDate\Traits\Calculations;
+use Mo7mud\HijriDate\Traits\ExactCalculations;
+use Mo7mud\HijriDate\Traits\Comparisons;
+use Mo7mud\HijriDate\Traits\Formatting;
+use Mo7mud\HijriDate\Converters\Contracts\GregorianToHijriConverter;
 
 /**
  * @method  HijriDate   addDays(int $daysToAdd = 1, bool $useGregorian = true)
@@ -122,7 +122,7 @@ class HijriDate implements CastsAttributes, SerializesCastableAttributes
      * Create a HijriDate object from a string.
      * 
      * @param string $hijri     Must be in the format Y-m-d
-     * @return \Remls\HijriDate\HijriDate
+     * @return \Mo7mud\HijriDate\HijriDate
      */
     public static function parse(string $hijri): HijriDate
     {
@@ -141,7 +141,7 @@ class HijriDate implements CastsAttributes, SerializesCastableAttributes
      * Create a HijriDate object from a Gregorian date.
      * 
      * @param \Carbon\Carbon|string|null $gregorian      Optional. Uses current time if not passed.
-     * @return \Remls\HijriDate\HijriDate
+     * @return \Mo7mud\HijriDate\HijriDate
      */
     public static function createFromGregorian($gregorian = null): HijriDate
     {
@@ -236,7 +236,7 @@ class HijriDate implements CastsAttributes, SerializesCastableAttributes
     {
         $converter = config(
             'hijri.conversion.converter',
-            \Remls\HijriDate\Converters\MaldivesG2HConverter::class
+            \Mo7mud\HijriDate\Converters\MakkaG2HConverter::class
         );
         if (!class_exists($converter))
             throw new InvalidArgumentException("Invalid converter class: $converter");
@@ -255,7 +255,7 @@ class HijriDate implements CastsAttributes, SerializesCastableAttributes
      * @param  string  $key
      * @param  mixed  $value
      * @param  array  $attributes
-     * @return \Remls\HijriDate\HijriDate|null
+     * @return \Mo7mud\HijriDate\HijriDate|null
      */
     public function get($model, $key, $value, $attributes)
     {
