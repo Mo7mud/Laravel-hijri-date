@@ -216,10 +216,7 @@ class HijriDate implements CastsAttributes, SerializesCastableAttributes
 
     public function getGregorianDate(): ?Carbon
     {
-        if (!$this->gregorianDate) {
-            $this->gregorianDate = self::getConverter()->getGregorianFromHijri($this);
-        }
-        return $this->gregorianDate;
+        return self::getConverter()->getGregorianFromHijri($this);
     }
 
     // For internal use.
