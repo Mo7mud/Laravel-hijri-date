@@ -86,7 +86,7 @@ $date->setYear(1447);  // takes int $year returns HijriDate
 $date->getMonth() // returns int 9
 $date->setMonth(5) // takes int $month returns HijriDate
 $date->getDay() // returns int 1
-$date->setMonth(15) // takes int $day returns HijriDate
+$date->setDay(15) // takes int $day returns HijriDate
 $date->getLocale() // returns string locale
 $date->setLocale() // takes string locale (eg. "ar") returns HijriDate
 
