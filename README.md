@@ -76,7 +76,23 @@ HijriDate::createFromGregorian('1991-12-01'); // returns HijriDate
 $date = new HijriDate(1443, 9, 1);
 $date->getGregorianDate();                    // returns Carbon
 ```
+### Getters & Setters
 
+```php
+$date = new HijriDate(1443, 9, 1);
+
+$date->getYear();  // returns int 1443
+$date->setYear(1447);  // takes int $year returns HijriDate
+$date->getMonth() // returns int 9
+$date->setMonth(5) // takes int $month returns HijriDate
+$date->getDay() // returns int 1
+$date->setMonth(15) // takes int $day returns HijriDate
+$date->getLocale() // returns string locale
+$date->setLocale() // takes string locale (eg. "ar") returns HijriDate
+
+
+
+```
 You may customise how the conversion works, as detailed [here](#customizing-how-dates-are-converted-between-hijri-and-gregorian).
 
 ### Calculations
